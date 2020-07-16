@@ -1,0 +1,105 @@
+.citation {
+  width: 100%;
+  padding: 50px 0 20px 0;
+  box-shadow: 0 0 60px 10px fade-out($color: #4F627B, $amount: 0.7%);
+  margin-bottom: 60px;
+  &__container {
+    display: flex;
+    justify-content: center;
+  }
+  &__portrait {
+    z-index: 5;
+    margin: 0 20px 0 0;
+    width: 158px;
+    height: 158px;
+  }
+  &__preview {
+    display: flex;
+    &__quote {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 20px 0;
+      &-open {
+        position: absolute;
+        width: 62px;
+        margin: -20px 0 0 -60px;
+      }
+      &-close {
+        position: absolute;
+        width: 62px;
+        margin: -5px 0 0px 460px;
+      }
+      &__content {
+        font-size: 30px;
+        padding: 0 10px;
+        line-height: 31px;
+      }
+      &__signature {
+        font-size: 14px;
+        padding: 0 10px;
+        width: 100%;
+      }
+    }
+  }
+  &__collapse {
+    margin: -40px 0 0 150px;
+    display: none; // TODO: set to none
+    font-size: 20px;
+    line-height: 25px;
+    & p.accent {
+      color: $color-secondary;
+      font-size: 30px;
+      line-height: 35px;
+    }
+    & ul {
+      list-style: none;
+      padding: 0;
+    }
+    & ul li {
+      margin: 20px 0 0 30px;
+    }
+    & ul li:before {
+      content: '•';
+      position: absolute;
+      margin: 0 -15px;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .citation {
+    padding-bottom: 150px;
+    &__container {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__portrait {
+      margin: 30px 0 20px;
+    }
+    &__preview {
+      &__quote {
+        justify-content: center;
+        align-items: center;
+        padding: 0 68px;
+        &-open {
+          margin: -25px 15px 0;
+        }
+        &-close {
+          margin: 55px 0 0 330px;
+        }
+        &__signature {
+          padding: 0px 15px;
+        }
+      }
+    }
+    &__collapse {
+      margin: -40px 50px;
+    }
+  }
+}
+
+.plus-accent {
+  color: $color-secondary;
+  margin: 0 5px;
+}

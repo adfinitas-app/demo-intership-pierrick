@@ -1,0 +1,68 @@
+.button {
+  @include flex-center;
+  padding: 15px 25px;
+  margin: 0 0 10px 0;
+  font-size: 15px;
+  background-color: lighten($color: $color-primary, $amount: 68%);
+  text-transform: uppercase;
+  box-sizing: border-box;
+  z-index: 50;
+  &__text {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    color: $color-primary;
+  }
+  &__icon {
+    align-items: center;
+    height: 15px;
+    width: 15px;
+  }
+  &--primary {
+    font-size: 20px;
+    padding: 4px;
+    background-color: $color-secondary;
+  }
+  &--primary &__text {
+    border: solid 2px $color-white;
+    padding: 8px 25px;
+    margin: 0;
+    color: $color-white;
+  }
+  &--block {
+    display: block;
+  }
+  &--shadowed {
+    box-shadow: 0 3px 20px 0 fade-out($color: #000000, $amount: 0.5%);
+  }
+  &--small {
+    padding: 4px 12px;
+  }
+  &--little {
+    display: inline;
+    padding: 13px 3px;
+    font-size: 12px;
+  }
+  &--little &__icon {
+    height: 11px;
+    width: 11px;
+  }
+  &--width { 
+    width: 40px;
+  }
+  &--rounded {
+    border-radius: 15px;
+  }
+  &--link {
+    background: none;
+    font-size: 14px;
+    color: $color-primary;
+    text-decoration: underline;
+    text-transform: none;
+    text-align: center;
+    padding: 0;
+  }
+  & a:hover {
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,18 @@
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: $color-primary;
+  font-weight: 400;
+  font-size: 15px;
+  overflow-x: hidden;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-center-column {
+  @include flex-center;
+  flex-direction: column;
+}

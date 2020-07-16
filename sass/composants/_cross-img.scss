@@ -1,0 +1,34 @@
+.cross-img {
+  position: absolute;
+  margin-top: -375px;
+  height: 650px;
+  z-index: 1;
+  &--right {
+    right: calc(-325px);
+  }
+  &--left {
+    left: calc(-325px);
+  }
+  &--small-right {
+    height: 550px;
+    margin: -275px 0px 0 0;
+    right: calc(-125px);
+  }
+  @media (min-width: 640px) {
+    height: 1200px;
+    z-index: -10;
+    &--right {
+      margin-top: -100px;
+      right: calc(-600px);
+    }
+    &--left {
+      left: calc(-600px);
+    }
+    &--small-right {
+      z-index: 0;
+      height: 550px;
+      margin: -275px 0px 0 0;
+      right: 0;
+    }
+  }
+}

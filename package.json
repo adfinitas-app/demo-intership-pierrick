@@ -1,0 +1,16 @@
+{
+  "name": "omf_ifi_2020_lp",
+  "version": "1.0.0",
+  "description": "my first tp for adfinitas",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss ./asset/css/style.css",
+    "minify": "sass ./sass/main.scss ./asset/css/style.min.css --style compressed"
+  },
+  "author": "P.Gouerec",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.5.0",
+    "sass": "^1.26.9"
+  }
+}
