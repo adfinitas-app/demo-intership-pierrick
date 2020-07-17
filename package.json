@@ -10,7 +10,10 @@
   "author": "P.Gouerec",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^4.5.0",
-    "sass": "^1.26.9"
+    "bootstrap": "^4.5.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "sass": "^1.26.10"
   }
 }

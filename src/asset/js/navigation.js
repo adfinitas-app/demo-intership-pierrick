@@ -1,3 +1,14 @@
+let navbar = document.getElementsByClassName('navigation')[0];
+let navbarOffset = navbar.offsetTop;
+
+window.onscroll = function() {
+  if (window.pageYOffset >= navbarOffset) {
+    navbar.classList.add("nav-fixed")
+  } else {
+    navbar.classList.remove("nav-fixed");
+  }
+};
+
 function toggle_navigation_bar() {
   let navigation = document.getElementsByClassName('navigation')[0];
 
