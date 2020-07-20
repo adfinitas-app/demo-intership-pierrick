@@ -32,12 +32,12 @@
   }
   .label {
     &--primary {
-      margin: -145px -220px 0 0;
       color: $color-secondary;
+      margin: 0;
     }
     &--secondary {
-      margin: 0 0 -145px -220px;
       color: lighten($color: $color-primary, $amount: 35%);
+      margin: 0;
     }
   }
   &__text {

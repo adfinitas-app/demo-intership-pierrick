@@ -4,6 +4,7 @@
     top: -5px;
     background: linear-gradient($color-primary, rgba(0, 0, 0, 0));
   }
+  transition: all .50s;
   z-index: 500;
   width: 100%;
   color: $color-white;
@@ -71,14 +72,16 @@
     background: none;
     padding: 0;
     margin: 1px 10px 0;
-    width: 20px;
-    height: 17px;
+    width: 35px;
+    height: 24px;
     justify-content: space-between;
     flex-direction: column;
     &__bar {
+      border-radius: 10px;
       background-color: $color-white;
-      height: 2px;
+      height: 4px;
       width: 100%;
+      transition: all .30s;
     }
   }
 }
@@ -132,24 +135,21 @@
       }
     }
     &--collapsed &__toggler {
-      position: absolute;
       justify-content: center;
-      right: 15px;
-      top: 20px;
+      transform: translate(-2px, 0);
       &__bar {
-        position: absolute;
         border-radius: 10px;
         background-color: darken($color: $color-white, $amount: 40%)
       }
       &__bar.toggler {
         &--top {
-          transform: rotate(45deg);
+          transform: rotate(45deg) translate(2px, 0);
         }
         &--middle {
           display: none;
         }
         &--bottom {
-          transform: rotate(-45deg);
+          transform: rotate(-45deg) translate(2px, 0);
         }
       }
     }

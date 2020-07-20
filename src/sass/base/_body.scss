@@ -3,7 +3,7 @@ body {
   color: $color-primary;
   font-weight: 400;
   font-size: 15px;
-  overflow-x: hidden;
+  overflow: hidden auto;
 }
 
 @mixin flex-center {
