@@ -72,6 +72,7 @@ function browserSync() {
 function watcher () {
   watch(path.style.src, {ignoreInitial: false}, styles)
   watch(path.scripts.src, {ignoreInitial: false}, scripts)
+  watch(path.images.src, {ignoreInitial: false}, images)
 }
 
 module.exports = {
