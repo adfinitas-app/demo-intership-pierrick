@@ -2,7 +2,7 @@ let menu = document.getElementsByClassName('menu--donation');
 let items = menu[0].children;
 let containers = document.getElementsByClassName('donation__container');
 
-for (i = 0 ; i < items.length ; i++) {
+for (var i = 0 ; i < items.length ; i++) {
   items[i].addEventListener("click", function(){
     item_click(this, items);
   });
@@ -21,7 +21,7 @@ function item_click(element, items) {
 }
 
 function get_active(items) {
-  for (i = 0 ; i < items.length ; i++) {
+  for (var i = 0 ; i < items.length ; i++) {
     if (items[i].classList.contains('active')) {
       return items[i];
     }
@@ -29,7 +29,7 @@ function get_active(items) {
 }
 
 function toggle_container(containers, container) {
-  for (i = 0 ; i < containers.length ; i++) {
+  for (var i = 0 ; i < containers.length ; i++) {
     containers[i].style.display = 'none';
   }
   document.querySelectorAll("#" + container)[0].style.display = 'block';

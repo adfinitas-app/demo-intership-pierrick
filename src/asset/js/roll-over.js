@@ -1,7 +1,7 @@
 let width = window.innerWidth;
 let rollover = document.getElementsByClassName('rollover');
 
-for (i = 0 ; i < rollover.length ; i++) {
+for (var i = 0 ; i < rollover.length ; i++) {
   let text = rollover[i].dataset['text'];
 
   if (width < 640) {
@@ -20,7 +20,7 @@ for (i = 0 ; i < rollover.length ; i++) {
 function rollover_unhover() {
   let rollover_pop = document.getElementsByClassName('roll-over');
 
-  for (i = 0 ; i < rollover_pop.length ; i++) {
+  for (var i = 0 ; i < rollover_pop.length ; i++) {
     rollover_pop[i].addEventListener('mouseout', function() {
       this.remove();
     });
@@ -30,7 +30,7 @@ function rollover_unhover() {
 function rollover_cross() {
   let cross = document.getElementsByClassName('roll-over__cross');
 
-  for (i = 0 ; i < cross.length ; i++) {
+  for (var i = 0 ; i < cross.length ; i++) {
     cross[i].addEventListener('click', function() {
       this.parentNode.remove();
     });

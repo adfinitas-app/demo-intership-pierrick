@@ -1,8 +1,8 @@
-let cal_menu = document.getElementsByClassName('menu--calendar');
-let cal_items = cal_menu[0].children;
-let cal_containers = document.getElementsByClassName('calendar__container');
+let cal_menu = document.getElementsByClassName('menu--calendar')
+let cal_items = cal_menu[0].children
+let cal_containers = document.getElementsByClassName('calendar__container')
 
-for (i = 0 ; i < cal_items.length ; i++) {
+for (var i = 0 ; i < cal_items.length ; i++) {
   cal_items[i].addEventListener("click", function(){
     item_click_cal(this, cal_items);
   });
@@ -20,7 +20,7 @@ function item_click_cal(element, cal_items) {
 }
 
 function get_active_cal(cal_items) {
-  for (i = 0 ; i < items.length ; i++) {
+  for (var i = 0 ; i < items.length ; i++) {
     if (cal_items[i].classList.contains('active')) {
       return cal_items[i];
     }
@@ -28,7 +28,7 @@ function get_active_cal(cal_items) {
 }
 
 function toggle_container_cal(cal_containers, container) {
-  for (i = 0 ; i < cal_containers.length ; i++) {
+  for (var i = 0 ; i < cal_containers.length ; i++) {
     cal_containers[i].style.display = 'none';
   }
   document.querySelectorAll("#" + container)[0].style.display = 'block';

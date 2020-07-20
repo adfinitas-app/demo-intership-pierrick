@@ -37,8 +37,8 @@ function numberWithSpaces(x) {
 function set_data_in_graph(data) {
   input.dataset['type'] = data;
   update_percent(data);
-  for (i = 0 ; i < allProgress.length ; i++) {
-    for (x = 0 ; x < 3 ; x++) {
+  for (var i = 0 ; i < allProgress.length ; i++) {
+    for (var x = 0 ; x < 3 ; x++) {
       if (x < 2)
         allProgress[i].children[x].textContent = numberWithSpaces(graph_data[data]['value'][i][x]) + "€";
       else {
@@ -54,7 +54,7 @@ function set_data_in_graph(data) {
 function update_percent(data) {
   let percent = 100 - graph_data[data]['percent'];
   let new_percent = 565.48 - (565.48 * percent) / 100;
-  for (i = 0 ; i < allProgress.length ; i++) {
+  for (var i = 0 ; i < allProgress.length ; i++) {
     allProgress[i].children[3].children[0].children[1].style.strokeDashoffset = new_percent;
   }
 }

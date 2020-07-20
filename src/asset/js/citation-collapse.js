@@ -1,8 +1,8 @@
-let fullCitation = document.getElementsByClassName("citation__collapse")[0];
-let buttons = document.getElementsByClassName('button');
-let btnView;
+let fullCitation = document.getElementsByClassName("citation__collapse")[0]
+let buttons = document.getElementsByClassName('button')
+let btnView
 
-for (btn of buttons) {
+for (var btn of buttons) {
   if (btn.getAttribute('href') == "#citation-collapse") {
     btn.addEventListener('click', function() {
       btnView = this;
