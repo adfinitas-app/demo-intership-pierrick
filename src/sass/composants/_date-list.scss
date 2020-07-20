@@ -1,0 +1,59 @@
+.date-container {
+  list-style: none;
+  padding: 10px 0;
+  @media (min-width: 640px) {
+    @include flex-center
+  }
+}
+
+.date-item {
+  @include flex-center;
+  margin: 30px 0;
+  &__date {
+    @include flex-center-column;
+    color: $color-secondary;
+    text-transform: uppercase;
+    line-height: 26px;
+    &__day {
+      font-size: 20px;
+    }
+    &__month {
+      font-size: 40px;
+    }
+    &__before {
+      font-size: 14px;
+    }
+  }
+  &__zone {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0 10px 0 15px;
+    font-size: 22px;
+  }
+  &__help {
+    cursor: pointer;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    background-color: lighten($color: $color-primary, $amount: 65%);
+    width: 80%;
+    height: 4px;
+    border-radius: 10px;
+    margin: 100px 0 0 0;
+  }
+  &:last-child {
+    &:after {
+      display: none;
+    }
+  }
+  @media (min-width: 640px) {
+    @include flex-center-column;
+    margin: 20px 50px;
+    &:after {
+      width: 4px;
+      height: 17%;
+      margin: 0 0 0 200px;
+    }
+  }
+}
