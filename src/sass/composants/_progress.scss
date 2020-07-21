@@ -1,7 +1,9 @@
 .progress-circle {
   @include flex-center-column;
-  &__bar svg {
+  &__bar {
     position: relative;
+  }
+  &__bar svg {
     height: 190px;
     width: 190px;
     & circle {
@@ -33,11 +35,13 @@
   .label {
     &--primary {
       color: $color-secondary;
-      margin: 0;
+      top: 0;
+      right: -50px;
     }
     &--secondary {
       color: lighten($color: $color-primary, $amount: 35%);
-      margin: 0;
+      bottom: 0;
+      left: -50px;
     }
   }
   &__text {
