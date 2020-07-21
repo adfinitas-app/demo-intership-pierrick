@@ -67,6 +67,7 @@
     }
   }
   &__toggler {
+    z-index: 100;
     display: none;
     border: none;
     background: none;
@@ -84,6 +85,10 @@
       transition: all .30s;
     }
   }
+}
+#nav-call-action {
+  position: absolute;
+  right: 15px;
 }
 
 @media (max-width: 640px) {

@@ -28,8 +28,8 @@ function get_active_cal(cal_items) {
 }
 
 function toggle_container_cal(cal_containers, container) {
-  for (var i = 0 ; i < cal_containers.length ; i++) {
-    cal_containers[i].style.display = 'none';
+  for (var i = 0 ; i < containers.length ; i++) {
+    $(cal_containers[i]).fadeOut(500)
   }
-  document.querySelectorAll("#" + container)[0].style.display = 'block';
+  $("#" + container).delay(499).fadeIn(1000);
 }
