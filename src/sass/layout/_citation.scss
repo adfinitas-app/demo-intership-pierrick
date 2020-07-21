@@ -45,6 +45,7 @@
   &__collapse {
     margin: -40px 0 0 150px;
     display: none; // TODO: set to none
+    // height: 0; // TODO: for animation
     font-size: 20px;
     line-height: 25px;
     & p.accent {
