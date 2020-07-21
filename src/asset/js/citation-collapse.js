@@ -6,14 +6,14 @@ for (var btn of buttons) {
   if (btn.getAttribute('href') == "#citation-collapse") {
     btn.addEventListener('click', function() {
       btnView = this;
-      this.style.display = 'none';
-      fullCitation.style.display = 'block';
+      $(this).hide()
+      $(fullCitation).slideDown(1000)
     });
   }
   if (btn.getAttribute('href') == "#citation-hide") {
     btn.addEventListener('click', function() {
-      fullCitation.style.display = 'none';
-      btnView.style.display = 'flex'
+      $(fullCitation).slideUp(500)
+      $(btnView).show()
     });
   }
 }

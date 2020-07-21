@@ -3,7 +3,7 @@
   margin: 35px 10px;
   &__container {
     display: none;
-    height: auto;
+    height: 400px;
     .container {
       &__text {
         @include flex-center-column;

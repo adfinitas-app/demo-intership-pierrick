@@ -30,7 +30,7 @@ function get_active(items) {
 
 function toggle_container(containers, container) {
   for (var i = 0 ; i < containers.length ; i++) {
-    containers[i].style.display = 'none';
+    $(containers[i]).fadeOut(500)
   }
-  document.querySelectorAll("#" + container)[0].style.display = 'block';
+  $("#" + container).delay(499).fadeIn(1000);
 }
