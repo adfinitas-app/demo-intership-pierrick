@@ -8,6 +8,7 @@
   background-color: $color-secondary;
   color: $color-white;
   padding: 5px 20px;
+  transition: all .25s;
   &__icon {
     min-width: 17px;
   }
