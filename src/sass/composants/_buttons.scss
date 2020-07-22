@@ -45,6 +45,7 @@
     margin-right: 5px;
   }
   &--pill {
+    z-index: 100;
     display: inline-block;
     background-color: $color-secondary;
     padding: 0 12px;

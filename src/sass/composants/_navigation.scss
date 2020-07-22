@@ -26,9 +26,8 @@
     &__menu {
       display: flex;
       margin: 0 10px 0 0;
-      .item-with-icon:before {
+      .item-with-icon {
         position: absolute;
-        content: url('../../asset/img/icon_cross.svg');
         margin: -15px 25px 0;
       }
     }
@@ -102,7 +101,7 @@
       display: none;
       &__menu {
         flex-direction: column;
-        .item-with-icon:before {
+        .item-with-icon {
           display: none;
         }
       }
@@ -143,7 +142,7 @@
       }
       &__bar.toggler {
         &--top {
-          transform: rotate(45deg) translate(0px, 2px);
+          transform: rotate(45deg) translate(1px, 2px);
 
         }
         &--middle {

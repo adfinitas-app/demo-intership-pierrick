@@ -21,6 +21,13 @@
     margin: 5px;
   }
   @media (max-width: 640px) {
-    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 0 10px 10px;
+    & .box__img {
+      display: flex;
+      justify-content: center;
+    }
   }
 }
