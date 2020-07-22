@@ -32,3 +32,23 @@ function toggle_navigation_bar() {
     document.getElementById('nav-call-action').style.display = 'none';
   }
 }
+
+$(document).ready(() => {
+  function loopIcon() {
+    $('.item-with-icon').fadeTo("slow", 0.5, () => {
+      setTimeout(function() {
+        loopIcon2();
+      }, 250);
+    });
+  }
+  function loopIcon2() {
+    $('.item-with-icon').fadeTo("slow", 1, () => {
+      setTimeout(function() {
+        loopIcon();
+      }, 250);
+    });
+  }
+  if ($(window).width() >= 640) {
+    loopIcon();
+  }
+})

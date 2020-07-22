@@ -1,3 +1,7 @@
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
 let count = 0
 
 new TypeIt(".subtitle-main", {

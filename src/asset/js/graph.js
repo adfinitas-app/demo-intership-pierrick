@@ -29,6 +29,15 @@ let allProgress = document.getElementsByClassName('progress-circle');
 let input = document.getElementById('custom_donation_input');
 let labelPrimary = document.getElementById('custom_label_primary');
 let labelSecondary = document.getElementById('custom_label_secondary');
+let labelsPrimary = document.getElementsByClassName('label--primary');
+let labelsSecondary = document.getElementsByClassName('label--secondary');
+let labelsText = document.getElementsByClassName('progress-circle__text');
+let progress_dash = document.getElementsByClassName('dash');
+let labels = {
+  0: labelsPrimary,
+  1: labelsSecondary,
+  2: labelsText
+}
 
 function numberWithSpaces(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
@@ -39,13 +48,14 @@ function set_data_in_graph(data) {
   update_percent(data);
   for (var i = 0 ; i < allProgress.length ; i++) {
     for (var x = 0 ; x < 3 ; x++) {
-      if (x < 2)
-        allProgress[i].children[x].textContent = numberWithSpaces(graph_data[data]['value'][i][x]) + "€";
-      else {
-        if (i != 2)
-          allProgress[i].children[x].lastElementChild.textContent = numberWithSpaces(graph_data[data]['value'][i][x]) + "€";
-        else
-          allProgress[i].children[x].lastElementChild.value = numberWithSpaces(graph_data[data]['value'][i][x]) + "€";
+      if (x < 2) {
+        labels[x][i].textContent = numberWithSpaces(graph_data[data]['value'][i][x]) + "€";
+      } else {
+        if (i != 2) {
+          labels[x][i].lastElementChild.textContent = numberWithSpaces(graph_data[data]['value'][i][x]) + "€"
+        } else {
+          labels[x][i].lastElementChild.value = numberWithSpaces(graph_data[data]['value'][i][x]) + "€";
+        }
       }
     }
   }
@@ -55,7 +65,7 @@ function update_percent(data) {
   let percent = 100 - graph_data[data]['percent'];
   let new_percent = 565.48 - (565.48 * percent) / 100;
   for (var i = 0 ; i < allProgress.length ; i++) {
-    allProgress[i].children[3].children[0].children[1].style.strokeDashoffset = new_percent;
+    progress_dash[i].style.strokeDashoffset = new_percent;
   }
 }
 
