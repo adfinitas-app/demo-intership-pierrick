@@ -15,7 +15,8 @@
     position: absolute;
     cursor: pointer;
     width: 21px;
-    margin: -50px 0 0 140px;
+    top: 10px;
+    right: 10px;
     padding: 10px 0;
     .cross-bar {
       height: 2px;
@@ -35,7 +36,7 @@
   @media (min-width: 640px) {
     height: 57px;
     right: auto;
-    margin: 145px 0 0 0;
+    bottom: -10px;
     &__cross {
       display: none;
     }
