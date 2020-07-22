@@ -1,0 +1,26 @@
+.modal-custom {
+  max-width: 650px;
+  width: 650px;
+  @media (max-width: 640px) {
+    width: 100%;
+    margin: 0;
+    & .modal-content {
+      margin: 95px 10px 0;
+    }
+  }
+}
+
+.box--modal {
+  background-color: $color-white;
+  padding-right: 0;
+  & img {
+    width: 150px;
+    height: 150px;
+  }
+  & ul li {
+    margin: 5px;
+  }
+  @media (max-width: 640px) {
+    
+  }
+}
