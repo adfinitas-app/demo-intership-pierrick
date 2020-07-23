@@ -2,8 +2,7 @@
   background-image: url('../../asset/img/bg-header.png');
   background-position: center;
   background-size: cover;
-  height: 100vh;
-  min-height: 720px;
+  min-height: 100vh;
   overflow: hidden;
   &--with-banner {
     box-shadow: 0 -5px 5px -5px $color-primary;
@@ -22,7 +21,35 @@
       display: block;
     }
   }
+  &--france {
+    background-image: url('../../asset/img/bg-france.png');
+    height: 100%;
+  }
+  &--palestine {
+    background-image: url('../../asset/img/bg-palestine.png');
+    height: 100%;
+  }
+  &--syrie {
+    background-image: url('../../asset/img/bg-syrie.png');
+    height: 100%;
+  }
 }
+
+.container {
+  &--default {
+    display: block;
+  }
+  &--france {
+    display: none;
+  }
+  &--palestine {
+    display: none;
+  }
+  &--syrie {
+    display: none;
+  }
+}
+
 
 @mixin text-upper {
   color: $color-white;
