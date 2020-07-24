@@ -1,17 +1,25 @@
+@mixin cst-header {
+  height: 1300px;
+  @media (max-width: 640px) {
+    height: 1500px;
+  }
+}
+
 .header {
   background-image: url('../../asset/img/bg-header.png');
   background-position: center;
   background-size: cover;
   min-height: 100vh;
   overflow: hidden;
-  &--with-banner {
-    box-shadow: 0 -5px 5px -5px $color-primary;
-    height: calc(100vh - 60px);
-  }
+  transition: background-image 1s;
   &--large {
     @media (max-width: 640px) {
       display: none;
     }
+  }
+  &--with-banner {
+    box-shadow: 0 -5px 5px -5px $color-primary;
+    height: calc(100vh - 60px);
   }
   &--mobile {
     margin: 310px 0px 0px 20px;
@@ -22,16 +30,16 @@
     }
   }
   &--france {
+    @include cst-header;
     background-image: url('../../asset/img/bg-france.png');
-    height: 100%;
   }
   &--palestine {
+    @include cst-header;
     background-image: url('../../asset/img/bg-palestine.png');
-    height: 100%;
   }
   &--syrie {
+    @include cst-header;
     background-image: url('../../asset/img/bg-syrie.png');
-    height: 100%;
   }
 }
 

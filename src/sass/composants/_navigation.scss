@@ -61,6 +61,10 @@
     & ul li a {
       color: $color-white;
     }
+    & ul li a:not([href]):hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
   }
   &__toggler {
     cursor: pointer;
@@ -154,4 +158,8 @@
       }
     }
   }
+}
+
+.nav-item {
+  cursor: pointer;
 }

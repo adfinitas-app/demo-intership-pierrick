@@ -1,6 +1,5 @@
 .cst-row {
   position: relative;
-  height: 1300px !important;
 }
 
 .cst-header-img {
@@ -106,5 +105,53 @@
     font-size: 30px;
     margin-left: -25px;
     padding-right: 10px;
+  }
+}
+
+@media (max-width: 640px) {
+  .cst-header-img {
+    width: 500px;
+    margin: 0 0 0 -58px;
+  }
+  .cst-col-left {
+    left: 20px;
+    top: 400px;
+  }
+  .cst-col-right {
+    left: 20px;
+    top: 405px;
+  }
+  .cst-title-donate {
+    line-height: 15px;
+    font-size: 12px;
+    &__under {
+      font-size: 20px;
+      & img {
+        margin: 1px 3px 0 0;
+        width: 15px;
+        height: 15px;
+      }
+      &__accent {
+        margin: 0 5px 0 0;
+      }
+    }
+  }
+  .cst-caption {
+    font-size: 22px;
+    margin-left: 2px;
+    width: 80%;
+  }
+  .cst-title {
+    font-size: 55px;
+    line-height: 40px;
+  }
+  .cst-download-link {
+
+  }
+  .cst-accent-box {
+
+  }
+  .cst-description {
+
   }
 }
