@@ -52,3 +52,39 @@ $(document).ready(() => {
     loopIcon();
   }
 })
+
+
+let containerHead = document.getElementsByClassName('container-head')
+let navItem = document.getElementsByClassName('nav-item');
+let header = document.getElementsByClassName('header')[0];
+let headers = ['default', 'france', 'palestine', 'syrie']
+
+function toggle_header(action) {
+  for (var i = 0 ; i < containerHead.length ; i++) {
+    $(containerHead[i]).fadeOut()
+    if (containerHead[i].classList.contains('container--' + action)) {
+      setTimeout(function() {
+        header.classList.add('header--' + action);
+        $(header).show();
+      }, 500);
+      $(containerHead[i]).delay(1000).fadeIn(500);
+    }
+    setTimeout(() => {
+      for (var x = 0 ; x < headers.length ; x++) {
+        if (headers[x] != action) {
+          header.classList.remove('header--' + headers[x]);
+        }
+      }
+    }, 600);
+  }
+  if (window.width <= 640) {
+    toggle_navigation_bar();
+  }
+}
+
+for (var i = 0 ; i < navItem.length ; i++) {
+  navItem[i].addEventListener('click', function() {
+    if (!header.classList.contains('header--' + this.dataset['action']))
+      toggle_header(this.dataset['action'])
+  });
+}
