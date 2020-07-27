@@ -6,6 +6,10 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
 }
+body:after{
+  position:absolute; z-index:-1;
+  content: url('../../asset/img/bg-france.png') url('../../asset/img/bg-palestine.png') url('../../asset/img/bg-syrie.png');
+}
 
 .mobile-wrapper {
   position: relative;
