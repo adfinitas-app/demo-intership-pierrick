@@ -50,7 +50,6 @@ function get_rollover(text) {
   return new_rollover;
 }
 
-
 $(document).ready(function(){
   $('.custom-tooltip')
   .tooltip()

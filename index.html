@@ -10,9 +10,10 @@
   
 </head>
 <body>
+
   <div class="mobile-wrapper">
   
-  <div class="banner">
+  <div class="banner custom-tooltip" data-toggle="tooltip" data-placement="bottom" title="Je suis un tooltip">
     <img class="banner__icon" src="dist/asset/img/icon_danger.svg">
     <span class="banner__title">Covid-19</span>
     <span class="banner__content">
@@ -21,7 +22,7 @@
   </div>
   
   <nav class="navigation">
-    <a data-action="default" class="nav-item"><div class="navigation__logo"></div></a>
+    <a data-action="default" class="nav-i"><div class="navigation__logo"></div></a>
     <a onclick="toggle_navigation_bar()" class="navigation__toggler">
       <div class="navigation__toggler__bar toggler--top"></div>
       <div class="navigation__toggler__bar toggler--middle"></div>
@@ -41,9 +42,9 @@
       </div>
       <div class="navigation__container__menu">
         <ul>
-          <li><img class="item-with-icon" src="dist/asset/img/icon_cross.svg"></img><a class="nav-item" data-action="france">En France</a></li>
-          <li><a class="nav-item" data-action="syrie">En Syrie</a></li>
-          <li><a class="nav-item" data-action="palestine">En Palestine</a></li>
+          <li><img class="item-with-icon" src="dist/asset/img/icon_cross.svg"></img><a class="nav-i" data-action="france">En France</a></li>
+          <li><a class="nav-i" data-action="syrie">En Syrie</a></li>
+          <li><a class="nav-i" data-action="palestine">En Palestine</a></li>
         </ul>
         <div class="button button--small button--primary ml-md-3">
           <img class="button__icon" src="dist/asset/img/icon_cross_nav.svg">
@@ -315,115 +316,118 @@
         <li data-action="is" class="menu-item custom-tooltip" data-toggle="tooltip" data-placement="top" title="Je suis redevable de l'Impôt sur les Sociétés ?">IS</li>
       </ul>
       
-      
-      <div id="ifi" class="donation__container">
-        
-        <div class="row justify-content-center">
-          <div class="col-md-6">
-            
-            <div class="container__text">
-              <span class="container__text__value">75%</span>
-              <span class="container__text__description">
-                du montant de mon don à la Fondation sont déductibles de cet impôt, dans la limite de 50 000 € par an.
-              </span>
-            </div>
-            
-          </div>
-        </div>
-        
-        <div class="row justify-content-center">
-          <div class="col-md-4">
-            
-            <div class="container__link">
-              <div class="button button--primary mb-3">
-                <img class="button__icon" src="dist/asset/img/icon_cross.svg">
-                <a href="#A" class="button__text stretched-link">
-                  Je fais un don ifi en ligne
-                </a>
+      <div class="donation__wrapper">
+
+        <div id="ifi" class="donation__container">
+          
+          <div class="row justify-content-center">
+            <div class="col-md-6">
+              
+              <div class="container__text">
+                <span class="container__text__value">75%</span>
+                <span class="container__text__description">
+                  du montant de mon don à la Fondation sont déductibles de cet impôt, dans la limite de 50 000 € par an.
+                </span>
               </div>
-              <div class="button mb-3">
-                <a href="#A" class="button__text stretched-link" data-toggle="modal" data-target="#modalContact">
-                  Je fais un don par virement bancaire
-                </a>
-              </div>
-              <a href="#link" class="link">
-                Je n’ai pas d’autres moyens de paiement,<br/>je fais un don par chèque
-              </a>
+              
             </div>
           </div>
-        </div>
-        
-      </div>
-      
-      <div id="ir" class="donation__container">
-        
-        <div class="row justify-content-center">
-          <div class="col-md-6">
-            
-            <div class="container__text">
-              <span class="container__text__value">66%</span>
-              <span class="container__text__description">
-                du montant de mon don à la Fondation sont déductibles de l’Impôt sur le revenu, dans la limite de 20% du revenu net imposable.
-              </span>
-            </div>
-            
-          </div>
-        </div>
-        
-        <div class="row justify-content-center">
-          <div class="col-md-4">
-            
-            <div class="container__link">
-              <div class="button button--primary">
-                <a href="#button" class="button__text">
-                  <img class="button__icon" src="dist/asset/img/icon_cross_nav.svg">
-                  Je fais un don ifi en ligne
+          
+          <div class="row justify-content-center">
+            <div class="col-md-4">
+              
+              <div class="container__link">
+                <div class="button button--primary mb-3">
+                  <img class="button__icon" src="dist/asset/img/icon_cross.svg">
+                  <a href="#A" class="button__text stretched-link">
+                    Je fais un don ifi en ligne
+                  </a>
+                </div>
+                <div class="button mb-3">
+                  <a href="#A" class="button__text stretched-link" data-toggle="modal" data-target="#modalContact">
+                    Je fais un don par virement bancaire
+                  </a>
+                </div>
+                <a href="#link" class="link">
+                  Je n’ai pas d’autres moyens de paiement,<br/>je fais un don par chèque
                 </a>
               </div>
             </div>
-            
           </div>
+          
         </div>
         
-      </div>
-      
-      <div id="is" class="donation__container">
-        
-        <div class="row justify-content-center">
-          <div class="col-md-6">
-            
-            <div class="container__text">
-              <span class="container__text__value">60%</span>
-              <span class="container__text__description">
-                du montant de mon don à la Fondation, au titre du mécénat, sont déductibles de cet impôt, dans la limite de 20 000€ ou de 0,5% du chiffre d’affaires hors taxes (au choix).
-              </span>
+        <div id="ir" class="donation__container">
+          
+          <div class="row justify-content-center">
+            <div class="col-md-6">
+              
+              <div class="container__text">
+                <span class="container__text__value">66%</span>
+                <span class="container__text__description">
+                  du montant de mon don à la Fondation sont déductibles de l’Impôt sur le revenu, dans la limite de 20% du revenu net imposable.
+                </span>
+              </div>
+              
             </div>
-            
           </div>
+          
+          <div class="row justify-content-center">
+            <div class="col-md-4">
+              
+              <div class="container__link">
+                <div class="button button--primary">
+                  <a href="#button" class="button__text">
+                    <img class="button__icon" src="dist/asset/img/icon_cross_nav.svg">
+                    Je fais un don ifi en ligne
+                  </a>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          
         </div>
         
-        <div class="row justify-content-center">
-          <div class="col-md-4">
-            
-            <div class="container__link">
-              <div class="button button--primary mb-3">
-                <a href="#A" class="button__text stretched-link">
-                  Je fais un don en ligne
+        <div id="is" class="donation__container">
+          
+          <div class="row justify-content-center">
+            <div class="col-md-6">
+              
+              <div class="container__text">
+                <span class="container__text__value">60%</span>
+                <span class="container__text__description">
+                  du montant de mon don à la Fondation, au titre du mécénat, sont déductibles de cet impôt, dans la limite de 20 000€ ou de 0,5% du chiffre d’affaires hors taxes (au choix).
+                </span>
+              </div>
+              
+            </div>
+          </div>
+          
+          <div class="row justify-content-center">
+            <div class="col-md-4">
+              
+              <div class="container__link">
+                <div class="button button--primary mb-3">
+                  <a href="#A" class="button__text stretched-link">
+                    Je fais un don en ligne
+                  </a>
+                </div>
+                <div class="button mb-3">
+                  <a href="#A" class="button__text stretched-link" data-toggle="modal" data-target="#modalContact">
+                    Je fais un don par virement bancaire
+                  </a>
+                </div>
+                <a href="#link" class="link">
+                  Je n’ai pas d’autres moyens de paiement,<br/>je fais un don par chèque
                 </a>
               </div>
-              <div class="button mb-3">
-                <a href="#A" class="button__text stretched-link" data-toggle="modal" data-target="#modalContact">
-                  Je fais un don par virement bancaire
-                </a>
-              </div>
-              <a href="#link" class="link">
-                Je n’ai pas d’autres moyens de paiement,<br/>je fais un don par chèque
-              </a>
+              
             </div>
-            
           </div>
+          
         </div>
-        
+
       </div>
       
       <div class="section-title p-3">
@@ -535,55 +539,59 @@
         </li>
       </ul>
       
-      <div id="online" class="calendar__container">
-        
-        <ul class="date-container">
-          <li class="date-item">
-            <div class="date-item__date">
-              <span class="date-item__date__day">Jeudi</span>
-              <span class="date-item__date__month">4 juin</span>
-              <span class="date-item__date__before">avant minuit</span>
-            </div>
-            <span class="date-item__zone">Zone 2</span>
-            <img class="date-item__help rollover" src="dist/asset/img/icon_question.svg" data-text="(départements 1 à 19), Monaco et non-résidents">
-          </li>
+      <div class="calendar__wrapper">
+
+        <div id="online" class="calendar__container">
           
-          <li class="date-item">
-            <div class="date-item__date">
-              <span class="date-item__date__day">Lundi</span>
-              <span class="date-item__date__month">8 juin</span>
-              <span class="date-item__date__before">avant minuit</span>
-            </div>
-            <span class="date-item__zone">Zone 2</span>
-            <img class="date-item__help rollover" src="dist/asset/img/icon_question.svg" data-text="(départements 1 à 19), Monaco et non-résidents">
-          </li>
+          <ul class="date-container">
+            <li class="date-item">
+              <div class="date-item__date">
+                <span class="date-item__date__day">Jeudi</span>
+                <span class="date-item__date__month">4 juin</span>
+                <span class="date-item__date__before">avant minuit</span>
+              </div>
+              <span class="date-item__zone">Zone 2</span>
+              <img class="date-item__help rollover" src="dist/asset/img/icon_question.svg" data-text="(départements 1 à 19), Monaco et non-résidents">
+            </li>
+            
+            <li class="date-item">
+              <div class="date-item__date">
+                <span class="date-item__date__day">Lundi</span>
+                <span class="date-item__date__month">8 juin</span>
+                <span class="date-item__date__before">avant minuit</span>
+              </div>
+              <span class="date-item__zone">Zone 2</span>
+              <img class="date-item__help rollover" src="dist/asset/img/icon_question.svg" data-text="(départements 1 à 19), Monaco et non-résidents">
+            </li>
+            
+            <li class="date-item">
+              <div class="date-item__date">
+                <span class="date-item__date__day">Jeudi</span>
+                <span class="date-item__date__month">11 juin</span>
+                <span class="date-item__date__before">avant minuit</span>
+              </div>
+              <span class="date-item__zone">Zone 3</span>
+              <img class="date-item__help rollover" src="dist/asset/img/icon_question.svg" data-text="(départements 1 à 19), Monaco et non-résidents">
+            </li>
+          </ul>
           
-          <li class="date-item">
-            <div class="date-item__date">
-              <span class="date-item__date__day">Jeudi</span>
-              <span class="date-item__date__month">11 juin</span>
-              <span class="date-item__date__before">avant minuit</span>
-            </div>
-            <span class="date-item__zone">Zone 3</span>
-            <img class="date-item__help rollover" src="dist/asset/img/icon_question.svg" data-text="(départements 1 à 19), Monaco et non-résidents">
-          </li>
-        </ul>
+          
+        </div>
         
-        
-      </div>
-      
-      <div id="paper" class="calendar__container">
-        
-        <ul class="date-container">
-          <li class="date-item">
-            <div class="date-item__date">
-              <span class="date-item__date__day">Vendredi</span>
-              <span class="date-item__date__month">12 juin</span>
-              <span class="date-item__date__before">avant minuit</span>
-            </div>
-          </li>
-        </ul>
-        
+        <div id="paper" class="calendar__container">
+          
+          <ul class="date-container">
+            <li class="date-item">
+              <div class="date-item__date">
+                <span class="date-item__date__day">Vendredi</span>
+                <span class="date-item__date__month">12 juin</span>
+                <span class="date-item__date__before">avant minuit</span>
+              </div>
+            </li>
+          </ul>
+          
+        </div>
+
       </div>
       
     </div>

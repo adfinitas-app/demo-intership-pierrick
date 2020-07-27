@@ -29,7 +29,7 @@ function get_active_cal(cal_items) {
 
 function toggle_container_cal(cal_containers, container) {
   for (var i = 0 ; i < containers.length ; i++) {
-    $(cal_containers[i]).fadeOut(500)
+    $(cal_containers[i]).fadeOut(500).delay(500);
   }
-  $("#" + container).delay(499).fadeIn(1000);
+  $("#" + container).fadeIn(500);
 }

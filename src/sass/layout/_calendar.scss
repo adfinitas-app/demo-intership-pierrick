@@ -1,4 +1,7 @@
 .calendar {
+  &__wrapper {
+    max-height: 200px;
+  }
   &__informations {
     p {
       font-size: 20px;

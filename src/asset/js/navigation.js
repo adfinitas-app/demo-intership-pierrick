@@ -55,7 +55,7 @@ $(document).ready(() => {
 
 
 let containerHead = document.getElementsByClassName('container-head')
-let navItem = document.getElementsByClassName('nav-item');
+let navItem = document.getElementsByClassName('nav-i');
 let header = document.getElementsByClassName('header')[0];
 let headers = ['default', 'france', 'palestine', 'syrie']
 
@@ -84,6 +84,10 @@ function toggle_header(action) {
 
 for (var i = 0 ; i < navItem.length ; i++) {
   navItem[i].addEventListener('click', function() {
+    for (var i = 0 ; i < navItem.length ; i++) {
+      navItem[i].style.color = 'rgba(255, 255, 255, .6)';
+    }
+    this.style.color = 'rgba(255, 255, 255, 1)';
     if (!header.classList.contains('header--' + this.dataset['action']))
       toggle_header(this.dataset['action'])
   });

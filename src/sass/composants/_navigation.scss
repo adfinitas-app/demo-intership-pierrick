@@ -52,14 +52,14 @@
         width: 1px;
       }
     }
+    & ul li  a {
+      color: rgba(255, 255, 255, .8);
+    }
     & ul li:last-child {
       border: none;
       &:after {
         display: none;
       }
-    }
-    & ul li a {
-      color: $color-white;
     }
     & ul li a:not([href]):hover {
       text-decoration: underline;
@@ -159,7 +159,6 @@
     }
   }
 }
-
-.nav-item {
+.nav-i {
   cursor: pointer;
 }
