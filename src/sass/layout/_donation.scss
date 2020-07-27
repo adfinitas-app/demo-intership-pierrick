@@ -1,9 +1,12 @@
 .donation {
   padding: 20px 0 120px;
   margin: 35px 10px;
+  &__wrapper {
+    position: relative;
+    height: 500px;
+  }
   &__container {
     display: none;
-    height: 500px;
     .container {
       &__text {
         @include flex-center-column;
