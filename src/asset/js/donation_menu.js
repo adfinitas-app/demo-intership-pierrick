@@ -30,11 +30,7 @@ function get_active(items) {
 
 function toggle_container(containers, container) {
   for (var i = 0 ; i < containers.length ; i++) {
-    $(containers[i]).css("position", "absolute");
-    $(containers[i]).css("z-index", "-10");
-    $(containers[i]).fadeOut(500).delay(500);
-    $(containers[i]).css("position", "block");
-    $(containers[i]).css("z-index", "0");
+    $(containers[i]).hide();
   }
-  $("#" + container).fadeIn(500);
+  $("#" + container).fadeIn(1000);
 }
